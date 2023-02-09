@@ -6,7 +6,6 @@ from rango.models import Page
 
 
 def index(request):
-    return HttpResponse("Rango says hey there partner! Link to about page: <a href='/rango/about/'>About</a>")
     
     # original code
     # context_dict = {'boldmessage': 'Crunchy, creamy, cookie, candy, cupcake!'}
@@ -21,7 +20,7 @@ def index(request):
 
 
 def about(request):
-    return HttpResponse("Rango says here is the about page! Link to home page: <a href='/rango/'>Index</a>")
+    context_dict = {}
     return render(request, 'rango/about.html', context=context_dict)
 
 
